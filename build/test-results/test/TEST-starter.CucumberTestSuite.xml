@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="starter.CucumberTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="LSTKBO220164" time="0.0">
+  <properties/>
+  <system-out><![CDATA[13:16:24.994 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.dev.webdriver.base.url=https://duckduckgo.com/dev
+13:16:24.999 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.driver=chrome
+13:16:25.000 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.windows.webdriver.chrome.driver=src/test/resources/webdriver/windows/chromedriver.exe
+13:16:25.000 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.linux.webdriver.gecko.driver=src/test/resources/webdriver/linux/geckodriver
+13:16:25.001 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.staging.webdriver.base.url=https://duckduckgo.com/staging
+13:16:25.001 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.default.webdriver.base.url=https://duckduckgo.com
+13:16:25.001 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.linux.webdriver.chrome.driver=src/test/resources/webdriver/linux/chromedriver
+13:16:25.001 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.windows.webdriver.gecko.driver=src/test/resources/webdriver/windows/geckodriver.exe
+13:16:25.001 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - chrome.switches=--start-maximized;--test-type;--no-sandbox;--ignore-certificate-errors;\r\n                   --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;\r\n                   --incognito;--disable-infobars,--disable-gpu
+13:16:25.002 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.mac.webdriver.gecko.driver=src/test/resources/webdriver/mac/geckodriver
+13:16:25.002 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.mac.webdriver.chrome.driver=src/test/resources/webdriver/mac/chromedriver
+13:16:25.002 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.prod.webdriver.base.url=https://duckduckgo.com/prod
+13:16:25.488 [Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/miguel.califa/Desktop/serenitybddrestinspanishtrainingv2/src/test/resources/features/search/search_by_keyword.feature
+13:16:25.774 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.dev.webdriver.base.url=https://duckduckgo.com/dev
+13:16:25.775 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - webdriver.driver=chrome
+13:16:25.775 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.windows.webdriver.chrome.driver=src/test/resources/webdriver/windows/chromedriver.exe
+13:16:25.775 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.linux.webdriver.gecko.driver=src/test/resources/webdriver/linux/geckodriver
+13:16:25.775 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.staging.webdriver.base.url=https://duckduckgo.com/staging
+13:16:25.775 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.default.webdriver.base.url=https://duckduckgo.com
+13:16:25.776 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.linux.webdriver.chrome.driver=src/test/resources/webdriver/linux/chromedriver
+13:16:25.776 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.windows.webdriver.gecko.driver=src/test/resources/webdriver/windows/geckodriver.exe
+13:16:25.776 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - chrome.switches=--start-maximized;--test-type;--no-sandbox;--ignore-certificate-errors;\r\n                   --disable-popup-blocking;--disable-default-apps;--disable-extensions-file-access-check;\r\n                   --incognito;--disable-infobars,--disable-gpu
+13:16:25.776 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.mac.webdriver.gecko.driver=src/test/resources/webdriver/mac/geckodriver
+13:16:25.776 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - drivers.mac.webdriver.chrome.driver=src/test/resources/webdriver/mac/chromedriver
+13:16:25.777 [Test worker] DEBUG net.thucydides.core.util.PropertiesFileLocalPreferences - environments.prod.webdriver.base.url=https://duckduckgo.com/prod
+13:16:25.785 [Test worker] INFO  - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+13:16:25.799 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus - Test suite started for story net.thucydides.core.model.Story@8fdf9da1
+13:16:25.803 [Test worker] INFO  - Test Suite Started: Search by keyword
+
+1 Scenarios (?[32m1 passed?[0m)
+3 Steps (?[32m3 passed?[0m)
+0m32,922s
+
+
+13:16:58.410 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reporting formats: [JSON, HTML]
+13:16:58.554 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reporting formats: [JSON, HTML]
+13:16:58.589 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Generating reports for 1 test outcomes using: net.thucydides.core.reports.json.JSONTestOutcomeReporter@31e8779e
+13:16:58.597 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Search by keyword:Searching for a term
+13:16:58.598 [pool-1-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.json.JSONTestOutcomeReporter@31e8779e: Generating report for test outcome: Search by keyword:Searching for a term
+13:16:58.616 [pool-1-thread-1] DEBUG net.thucydides.core.reports.json.JSONTestOutcomeReporter - Generating JSON report for Searching for a term to file C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.json (using temp file C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.json7c62e702-be29-48b0-9a89-c1138f075796)
+13:16:58.797 [pool-1-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Search by keyword:Searching for a term done
+13:16:58.797 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Shutting down executor service
+13:16:58.798 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reports generated in: 209 ms
+13:16:58.798 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Generating reports for 1 test outcomes using: net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@7a38734c
+13:16:58.810 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Search by keyword:Searching for a term
+13:16:58.810 [pool-2-thread-1] INFO net.thucydides.core.reports.ReportService - net.thucydides.core.reports.html.HtmlAcceptanceTestReporter@7a38734c: Generating report for test outcome: Search by keyword:Searching for a term
+13:16:58.884 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Added feature Search by keyword
+13:16:58.897 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome Searching for a term-[]: Optional[Requirement{name='Search by keyword', type='feature' parent = 'Search', cardNumber='null'}]
+13:16:58.901 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome Searching for a term-[]: Optional[Requirement{name='Search by keyword', type='feature' parent = 'Search', cardNumber='null'}]
+13:16:58.986 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome Searching for a term-[]: Optional[Requirement{name='Search by keyword', type='feature' parent = 'Search', cardNumber='null'}]
+13:16:58.987 [pool-2-thread-1] DEBUG net.thucydides.core.requirements.BaseRequirementsService - Requirement found for test outcome Searching for a term-[]: Optional[Requirement{name='Search by keyword', type='feature' parent = 'Search', cardNumber='null'}]
+13:16:58.998 [pool-2-thread-1] DEBUG serenity.reporting - Generating report in 35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f_screenshots.html
+13:17:00.243 [pool-2-thread-1] DEBUG serenity.reporting - Generated report 35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f_screenshots.html in 1245 ms
+13:17:02.734 [pool-2-thread-1] DEBUG serenity.reporting - Generating report in 35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.html
+13:17:03.389 [pool-2-thread-1] DEBUG serenity.reporting - Generated report 35cfed838fce6a34547d061ef095dd6837e5024c11ea9a63e7b6112cef6d263f.html in 655 ms
+13:17:03.389 [pool-2-thread-1] DEBUG net.thucydides.core.reports.ReportService - Processing test outcome Search by keyword:Searching for a term done
+13:17:03.389 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Shutting down executor service
+13:17:03.389 [Test worker] DEBUG net.thucydides.core.reports.ReportService - Reports generated in: 4591 ms
+13:17:03.482 [Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Cleanup test resources for URI file:///C:/Users/miguel.califa/Desktop/serenitybddrestinspanishtrainingv2/src/test/resources/features/search/search_by_keyword.feature
+13:17:03.483 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Closing darkroom
+13:17:03.483 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line shutting down
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
