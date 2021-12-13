@@ -17,7 +17,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.core.Every.everyItem;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.*;
 
 public class RegisterFormStepDefinition {
 
@@ -35,7 +35,7 @@ public class RegisterFormStepDefinition {
     }
 
     @When("He wrotes his personal data")
-    public void search_for() {
+    public void writingEmailOnForm() {
         String email =  Math.random() + "@gmail.com";
         withCurrentActor(
                 Register.writeEmail(email)
@@ -43,10 +43,9 @@ public class RegisterFormStepDefinition {
     }
 
     @Then("He press OK")
-    public void he_shows_the_html_css_js_page() {
-
+    public void validatingMailWrited() {
         theActorInTheSpotlight().should(
-                seeThat("testing website viewed",
-                        alertList.getList(), empty()));
+                seeThat("testing register form viewed",
+                        alertList.getList(), is(not(empty()))));
     }
 }

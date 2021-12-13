@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Load HomePage" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-13T03:48:40" hostname="LSTKBO220164" time="18.237">
+<testsuite name="Load HomePage" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-13T06:01:28" hostname="LSTKBO220164" time="16.122">
   <properties/>
-  <testcase name="Getting In To The Website" classname="Load HomePage" time="18.237"/>
-  <system-out><![CDATA[22:48:40.357 [Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/miguel.califa/Desktop/serenitybddrestinspanishtrainingv2/src/test/resources/features/HomePage/Load_HomePage.feature
-22:48:40.499 [Test worker] INFO  - 
+  <testcase name="Getting In To The Website" classname="Load HomePage" time="16.122"/>
+  <system-out><![CDATA[01:01:28.724 [Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/miguel.califa/Desktop/serenitybddrestinspanishtrainingv2/src/test/resources/features/HomePage/Load_HomePage.feature
+01:01:28.856 [Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -11,35 +11,31 @@
 
 Getting In To The Website(load-homepage;getting-in-to-the-website)
 --------------------------------------------------------------------------------
-22:48:40.714 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Added feature Load HomePage
-22:48:40.768 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Added feature Register
-22:48:41.469 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STARTING STEP: HomePageStepDefinition.on_the_automationpractice_homepage - !#title
-22:48:41.500 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STARTING STEP: HomePageStepDefinition.on_the_automationpractice_homepage - {0} opens the #targetPageName
-22:48:41.590 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Using automatically driver download
-22:48:42.215 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=96 in cache (valid until 23:11:04 12/12/2021 COT)
-22:48:42.217 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome96=96.0.4664.45 in cache (valid until 13:16:29 13/12/2021 COT)
-22:48:42.218 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
-22:48:42.227 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 96.0.4664.45 found in cache
-22:48:42.229 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\miguel.califa\.cache\selenium\chromedriver\win32\96.0.4664.45\chromedriver.exe
-22:48:43.755 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-22:48:43.755 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging...}
-22:48:52.473 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
-22:48:52.474 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
-22:48:53.612 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\969a93b8557c1a998264e15c652c6fac8dd758e35c54f150d1bec62b31fb08e4.png
-22:48:53.614 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-11013279112326068337
-22:48:53.615 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\969a93b8557c1a998264e15c652c6fac8dd758e35c54f150d1bec62b31fb08e4.png
-22:48:53.620 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STEP DONE: {0} opens the #targetPageName
-22:48:53.656 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STEP DONE: !#title
-22:48:54.319 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\969a93b8557c1a998264e15c652c6fac8dd758e35c54f150d1bec62b31fb08e4.png
-22:48:54.982 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\969a93b8557c1a998264e15c652c6fac8dd758e35c54f150d1bec62b31fb08e4.png
-22:48:56.124 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\34caedce36eee95b3caafe4b91f4209da08a3d9d7dc8a62193e589ac19d0d0cc.png
-22:48:56.125 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-663199610455749749
-22:48:56.125 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\34caedce36eee95b3caafe4b91f4209da08a3d9d7dc8a62193e589ac19d0d0cc.png
-22:48:56.129 [Test worker] DEBUG net.serenitybdd.screenplay.targets.IFrameSwitcher - default content already selected for By.cssSelector: .container
-22:48:57.344 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\db3d75cb784858328d235b94ac6e4c583bbc59cc7b69efd02d9413225e8a7ce8.png
-22:48:57.346 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-12028220606850806868
-22:48:57.346 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\db3d75cb784858328d235b94ac6e4c583bbc59cc7b69efd02d9413225e8a7ce8.png
-22:48:58.317 [Test worker] INFO  - 
+01:01:28.972 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Added feature Load HomePage
+01:01:29.019 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Added feature Login
+01:01:29.025 [Test worker] DEBUG net.thucydides.core.requirements.model.cucumber.CucumberParser - Added feature Register
+01:01:29.671 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STARTING STEP: HomePageStepDefinition.on_the_automationpractice_homepage - !#title
+01:01:29.702 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STARTING STEP: HomePageStepDefinition.on_the_automationpractice_homepage - {0} opens the #targetPageName
+01:01:29.809 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Using automatically driver download
+01:01:30.324 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome=96 in cache (valid until 01:22:36 13/12/2021 COT)
+01:01:30.324 [Test worker] DEBUG io.github.bonigarcia.wdm.cache.ResolutionCache - Resolution chrome96=96.0.4664.45 in cache (valid until 13:16:29 13/12/2021 COT)
+01:01:30.324 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+01:01:30.340 [Test worker] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 96.0.4664.45 found in cache
+01:01:30.340 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\miguel.califa\.cache\selenium\chromedriver\win32\96.0.4664.45\chromedriver.exe
+01:01:31.471 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+01:01:31.471 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging...}
+01:01:40.542 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+01:01:40.544 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+01:01:41.526 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\21c2ff3ba4d9e2b0359f7c6b6590bc28d2d324c2b2eaa7b3bb371c96d53bc616.png
+01:01:41.526 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-10270741436433213516
+01:01:41.526 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\21c2ff3ba4d9e2b0359f7c6b6590bc28d2d324c2b2eaa7b3bb371c96d53bc616.png
+01:01:41.526 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STEP DONE: {0} opens the #targetPageName
+01:01:41.558 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor - STEP DONE: !#title
+01:01:42.128 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\21c2ff3ba4d9e2b0359f7c6b6590bc28d2d324c2b2eaa7b3bb371c96d53bc616.png
+01:01:42.976 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\21c2ff3ba4d9e2b0359f7c6b6590bc28d2d324c2b2eaa7b3bb371c96d53bc616.png
+01:01:42.991 [Test worker] DEBUG net.serenitybdd.screenplay.targets.IFrameSwitcher - default content already selected for By.cssSelector: .container
+01:01:43.809 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\Users\miguel.califa\Desktop\serenitybddrestinspanishtrainingv2\target\site\serenity\21c2ff3ba4d9e2b0359f7c6b6590bc28d2d324c2b2eaa7b3bb371c96d53bc616.png
+01:01:44.633 [Test worker] INFO  - 
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
  |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
    | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
@@ -48,11 +44,11 @@ Getting In To The Website(load-homepage;getting-in-to-the-website)
 Getting In To The Website
 ----------------------------------------------------------------------
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947}) on port 4562
+  <system-err><![CDATA[Starting ChromeDriver 96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947}) on port 14776
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-dic. 12, 2021 10:48:46 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+dic. 13, 2021 1:01:33 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

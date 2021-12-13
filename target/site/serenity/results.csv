@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Load HomePage","Getting In To The Website","SUCCESS","2021-12-12T22:48:40.481827-05:00[America/Bogota]","0.0","16.89"
-"Register","Register on The Website","ERROR","2021-12-12T22:48:58.33226-05:00[America/Bogota]","0.0","19.86"
+"Load HomePage","Getting In To The Website","SUCCESS","2021-12-13T01:01:28.8408311-05:00[America/Bogota]","0.0","14.98"
+"Login","Login on The Website","SUCCESS","2021-12-13T01:01:44.6643773-05:00[America/Bogota]","0.0","20.51"
+"Register","Register on The Website","SUCCESS","2021-12-13T01:02:05.8403782-05:00[America/Bogota]","0.0","36.27"
