@@ -10,3 +10,4 @@ public class HomePage {
                 Open.browserOn().the(AutomationPracticePage.class));
     }
 }
+

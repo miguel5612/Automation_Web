@@ -7,12 +7,16 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.Question;
 
 import starter.pages.HomePage;
+import starter.validations.load;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.core.Every.everyItem;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class HomePageStepDefinition {
 
@@ -35,15 +39,10 @@ public class HomePageStepDefinition {
         */
     }
 
-    @Then("He shows the HTML/CSS/JS Page")
-    public void viewHTMLPage() {
-        //HomePage.getTittleOfWebsite();
-        /*
-         theActorInTheSpotlight().should(
-                seeThat("search result titles",
-                        SearchResult.titles(), everyItem(containsIgnoringCase(term)))
-        );
-        */
-
-    }
+    @Then("He shows the HTML\\/CSS\\/JS Page")
+    public void he_shows_the_html_css_js_page() {
+            theActorInTheSpotlight().should(
+                    seeThat("testing website viewed",
+                            load.listContainers(), notNullValue()));
+      }
 }
