@@ -27,7 +27,7 @@ public class HomePageStepDefinition {
 
     @Given("^(.*) is on the automationpractice home page")
     public void on_the_automationpractice_homepage(String actor) {
-        theActorCalled(actor).attemptsTo(HomePage.automationpracticeHomePage());
+        theActorCalled(actor).attemptsTo(HomePage.serenityHomePage());
     }
 
     @When("He wait to Load")

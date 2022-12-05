@@ -28,7 +28,7 @@ public class LoginFormStepDefinition {
 
     @Given("^(.*) is on the automationpractice Login page")
     public void on_the_automationpractice_loginpage(String actor) {
-        theActorCalled(actor).attemptsTo(HomePage.automationpracticeHomePage());
+        theActorCalled(actor).attemptsTo(HomePage.serenityHomePage());
         withCurrentActor(
                 login.pressBtnGoToLogin()
         );
@@ -37,7 +37,7 @@ public class LoginFormStepDefinition {
     @When("He wrotes his personal data \\(Email and Password)")
     public void loginLoadData() {
         withCurrentActor(
-                login.writeCredentials("miguelangel5612@gmail.com", "abcd1234")
+                login.writeCredentials("admin", "serenity")
         );
     }
 
