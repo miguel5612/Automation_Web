@@ -8,9 +8,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 public class login {
     public static Performable pressBtnGoToLogin() {
-        return Task.where("{0} is on the automationpractice register page",
-                //Clear.field(SearchForm.SEARCH_FIELD),
-                //Enter.theValue(term).into(SearchForm.SEARCH_FIELD),
+        return Task.where("{0} is on the serenity Login page",
                 Click.on(loginForm.GOLogin_Button)
         );
     }

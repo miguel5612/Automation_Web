@@ -6,8 +6,12 @@ import net.serenitybdd.screenplay.actions.Open;
 
 public class HomePage {
     public static Performable serenityHomePage() {
-        return Task.where("{0} is on the automationpractice home page",
-                Open.browserOn().the(AutomationPracticePage.class));
+        return Task.where("{0} is on the Serenity home page",
+                Open.browserOn().the(SerenityWebPage.class));
+    }
+    public static Performable serenityLoginPage() {
+        return Task.where("{0} is on the Serenity home page",
+                Open.browserOn().the(SerenityLoginPage.class));
     }
 }
 

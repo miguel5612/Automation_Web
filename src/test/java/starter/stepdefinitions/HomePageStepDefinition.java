@@ -25,7 +25,7 @@ public class HomePageStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^(.*) is on the automationpractice home page")
+    @Given("^(.*) is on the serenity home page")
     public void on_the_automationpractice_homepage(String actor) {
         theActorCalled(actor).attemptsTo(HomePage.serenityHomePage());
     }

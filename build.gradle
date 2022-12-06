@@ -1,6 +1,6 @@
 defaultTasks 'clean', 'test', 'aggregate'
-
 group 'org.example'
+version 6.3
 version '1.0-SNAPSHOT'
 repositories {
     mavenLocal()
@@ -40,9 +40,8 @@ ext {
 }
 
 dependencies {
-    compile "ch.qos.logback:logback-classic:${logbackVersion}"
-
-    compile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}",
+            "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",

@@ -26,7 +26,7 @@ public class LoginFormStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^(.*) is on the automationpractice Login page")
+    @Given("^(.*) is on the serenity Login page")
     public void on_the_automationpractice_loginpage(String actor) {
         theActorCalled(actor).attemptsTo(HomePage.serenityHomePage());
         withCurrentActor(
