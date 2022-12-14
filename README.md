@@ -1,6 +1,6 @@
 # Automation_Full_Ex
 
-This is an automation test using Java and exploring the site http://automationpractice.com/index.php
+This is an automation test using Java and exploring the site https://serenity.is
 
 ## Pages:
 1. Index of webpage.
@@ -21,8 +21,8 @@ This is an automation test using Java and exploring the site http://automationpr
 7. Checkout -> When i will checkout result has the product added?.
 
 ## target
-1. (Dev/Prod/Stage) http://automationpractice.com/index.php
+1. (Dev/Prod/Stage) https://serenity.is
 
 ## Run tests:
 
-./gradlew clean test
+clean test aggregate
