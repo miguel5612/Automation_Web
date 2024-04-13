@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import questions.SearchBU;
 import tasks.CreateBU;
 import tasks.Login;
@@ -35,7 +36,7 @@ public void setStage(){  OnStage.setTheStage (new OnlineCast());}
     public void the_user_logs_in(io.cucumber.datatable.DataTable data) {
         List<Map<String,String>> datalogin= data.asMaps(String.class,String.class);
         theActorInTheSpotlight().attemptsTo(Login.onThePage(datalogin.get(0).get("user"),datalogin.get(0).get("password")));
-            }
+    }
 
     @Given("he go to the Bussines Units")
     public void he_go_to_the_bussines_units() {
@@ -53,4 +54,47 @@ public void setStage(){  OnStage.setTheStage (new OnlineCast());}
         theActorInTheSpotlight().should(GivenWhenThen.seeThat(SearchBU.theItemExist(data)));
     }
 
+
+    @Given("que el usuario está en la página principal de (.+)")
+    public void que_el_usuario_esta_en_la_pagina_principal_de_tiendas_exito(String pagina) {
+        //driver.get("https://www.exito.com/");
+        //wait = new WebDriverWait(driver, 10);
+        int a = 1 + 1;
     }
+
+    @When("el usuario navega a una categoría y subcategoría específica")
+    public void el_usuario_navega_a_una_categoria_y_subcategoria_especifica() {
+        // Navegar utilizando los elementos de la web
+        int a = 1 + 1;
+    }
+
+    @And("el usuario agrega 5 productos aleatorios al carrito con cantidades aleatorias entre 1 y 10")
+    public void el_usuario_agrega_productos_aleatorios_al_carrito_con_cantidades_aleatorias() {
+        // Implementar la lógica para añadir productos aleatorios
+        int a = 1 + 1;
+    }
+
+    @Then("se verifica que los nombres de los productos en el carrito coincidan con los seleccionados")
+    public void se_verifica_que_los_nombres_de_los_productos_en_el_carrito_coincidan_con_los_seleccionados() {
+        // Verificar nombres
+        int a = 1 + 1;
+    }
+
+    @And("se verifica que las cantidades de los productos en el carrito sean correctas")
+    public void se_verifica_que_las_cantidades_de_los_productos_en_el_carrito_sean_correctas() {
+        // Verificar cantidades
+        int a = 1 + 1;
+    }
+    @And("se verifica que el total de los precios en el carrito sea correcto")
+    public void se_verifica_que_el_total_de_los_precios_carrito_sea_correcto() {
+        // Verificar cantidades
+        int a = 1 + 1;
+    }
+    @And("se verifica que el número de productos en el carrito sea 5")
+    public void se_verifica_que_el_numero_de_productos_en_el_carrito_sea_5() {
+        // Verificar cantidades
+        int a = 1 + 1;
+    }
+
+
+}
