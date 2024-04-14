@@ -2,6 +2,11 @@
 
 This is an automation test using Java and exploring the site https://serenity.is
 
+## Step 1:
+
+Instalar una versión estable de Google Chrome.
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
 ## Pages:
 1. Index of webpage.
 2. Register Module.

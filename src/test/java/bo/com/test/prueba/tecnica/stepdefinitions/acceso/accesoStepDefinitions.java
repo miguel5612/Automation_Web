@@ -6,25 +6,20 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.thucydides.core.annotations.Managed;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import net.serenitybdd.screenplay.actions.Open;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class accesoStepDefinitions {
-    @Managed
     private WebDriver driver;
 
     @Before
     public void setUp() {
 
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         OnStage.setTheStage(new OnlineCast());
         OnStage.theActorCalled("Cliente");
     }
@@ -32,7 +27,7 @@ public class accesoStepDefinitions {
     @Given("el usuario está en la página principal de {string}")
     public void que_el_usuario_esta_en_la_pagina_principal_de_tiendas_exito(String pagina) {
         OnStage.theActorInTheSpotlight().wasAbleTo(
-                Open.url("https://www.exito.com/")
+                Open.browserOn().thePageNamed("home.page")
         );
     }
 
