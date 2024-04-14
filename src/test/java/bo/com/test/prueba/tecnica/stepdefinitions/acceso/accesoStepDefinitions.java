@@ -1,5 +1,7 @@
 package bo.com.test.prueba.tecnica.stepdefinitions.acceso;
 
+import bo.com.test.prueba.tecnica.tasks.AgregarProductosAleatoriosAlCarrito;
+import bo.com.test.prueba.tecnica.tasks.seleccionarCategoriaSubcategoria;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
@@ -34,14 +36,18 @@ public class accesoStepDefinitions {
     @When("el usuario navega a una categoría y subcategoría específica")
     public void el_usuario_navega_a_una_categoria_y_subcategoria_especifica() {
         // Navegar utilizando los elementos de la web
-        int a = 1 + 1;
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                seleccionarCategoriaSubcategoria.go(10)
+        );
     }
 
-    @And("el usuario agrega 5 productos aleatorios al carrito con cantidades aleatorias entre 1 y 10")
-    public void el_usuario_agrega_productos_aleatorios_al_carrito_con_cantidades_aleatorias() {
-        // Implementar la lógica para añadir productos aleatorios
-        int a = 1 + 1;
+    @And("el usuario agrega {int} productos aleatorios al carrito con cantidades aleatorias entre {int} y {int}")
+    public void el_usuario_agrega_productos_aleatorios_al_carrito_con_cantidades_aleatorias(int numeroDeProductos, int minCantidad, int maxCantidad) {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                AgregarProductosAleatoriosAlCarrito.con(numeroDeProductos, minCantidad, maxCantidad)
+        );
     }
+
 
     @Then("se verifica que los nombres de los productos en el carrito coincidan con los seleccionados")
     public void se_verifica_que_los_nombres_de_los_productos_en_el_carrito_coincidan_con_los_seleccionados() {
