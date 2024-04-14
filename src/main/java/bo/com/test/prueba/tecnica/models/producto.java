@@ -1,11 +1,11 @@
 package bo.com.test.prueba.tecnica.models;
 
-public class Producto {
+public class producto {
     private String nombre;
     private int cantidad;
-    private double precio;
+    private int precio;// Por que no se tienen decimales para el precio, todos son cerrados en entero
 
-    public Producto(String nombre, int cantidad, double precio) {
+    public producto(String nombre, int cantidad, int precio) {
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.precio = precio;
@@ -32,7 +32,7 @@ public class Producto {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 }
