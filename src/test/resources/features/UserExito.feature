@@ -15,4 +15,5 @@ Feature: Comprar productos en Tienda Éxito
     And se verifica que el número de productos en el carrito sea correcta
     Examples:
       |unitName|
-      |Tiendas Éxito|
+      ##@externaldata@./src/test/resources/datadriven/apiData.xlsx@infoWEB
+   |Tiendas Éxito|

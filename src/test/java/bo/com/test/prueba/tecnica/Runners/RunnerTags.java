@@ -10,18 +10,19 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
-@RunWith(CucumberWithSerenity.class)
+@RunWith(RunnerPersonalizado.class)
 @CucumberOptions(
         features="src/test/resources/features/",
-        tags= "@agregarCarroProductosAleatorios",
+        tags= "@apiRest",
         glue= "bo.com.test.prueba.tecnica.stepdefinitions",
         plugin = {"pretty","json:target/cucumber-reports/cucumber.json"},
-        snippets=CucumberOptions.SnippetType.CAMELCASE)
+        snippets=CucumberOptions.SnippetType.CAMELCASE,
+        publish = true
+)
 
 public class RunnerTags {
-    /*@BeforeSuite
+    @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
         DataToFeature.overrideFeatureFiles("src/test/resources/features");
     }
-     */
 }
