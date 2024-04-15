@@ -2,6 +2,8 @@ package bo.com.test.prueba.tecnica.stepdefinitions.acceso;
 
 import bo.com.test.prueba.tecnica.tasks.agregarProductosAleatoriosAlCarrito;
 import bo.com.test.prueba.tecnica.tasks.seleccionarCategoriaSubcategoria;
+import bo.com.test.prueba.tecnica.tasks.verificarCantidadesDeProductosEnElCarrito;
+import bo.com.test.prueba.tecnica.tasks.verificarNumeroDeProductosEnElCarrito;
 import bo.com.test.prueba.tecnica.tasks.verificarNombresCarrito;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -57,18 +59,20 @@ public class accesoStepDefinitions {
 
     @And("se verifica que las cantidades de los productos en el carrito sean correctas")
     public void se_verifica_que_las_cantidades_de_los_productos_en_el_carrito_sean_correctas() {
-        // Verificar cantidades
-        int a = 1 + 1;
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                verificarCantidadesDeProductosEnElCarrito.con()
+        );
     }
     @And("se verifica que el total de los precios en el carrito sea correcto")
     public void se_verifica_que_el_total_de_los_precios_carrito_sea_correcto() {
         // Verificar cantidades
         int a = 1 + 1;
     }
-    @And("se verifica que el número de productos en el carrito sea 5")
-    public void se_verifica_que_el_numero_de_productos_en_el_carrito_sea_5() {
-        // Verificar cantidades
-        int a = 1 + 1;
+    @And("se verifica que el número de productos en el carrito sea correcta")
+    public void se_verifica_que_el_numero_de_productos_en_el_carrito() {
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                verificarNumeroDeProductosEnElCarrito.con()
+        );
     }
 
 

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static bo.com.test.prueba.tecnica.userinterfaces.carritoCompras.NOMBRES_PRODUCTOS;
 import static bo.com.test.prueba.tecnica.userinterfaces.paginaCompras.*;
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import static org.codehaus.groovy.runtime.DefaultGroovyMethods.findAll;
@@ -41,15 +42,11 @@ public class verificarNombresCarrito implements Task {
                 .map(producto::getNombre)
                 .collect(Collectors.toList());
 
-        // Ahora obtendremos los nombres de los productos que están actualmente en el carrito de compras
-        List<String> nombresProductosCarrito = new ArrayList<>();
-        List<WebElementFacade> elementosProductosEnCarrito = findAll("//div[contains(@class, 'exito-checkout-io-0-x-itemCartContent')]//div[@data-molecule-product-detail-name]//span[@data-molecule-product-detail-name-span]");
+        List<WebElementFacade> elementosNombresProductos = NOMBRES_PRODUCTOS.resolveAllFor(actor);
+        List<String> nombresProductosCarrito = elementosNombresProductos.stream()
+                .map(WebElementFacade::getText)
+                .collect(Collectors.toList());
 
-        for (WebElementFacade elementoProductoEnCarrito : elementosProductosEnCarrito) {
-            nombresProductosCarrito.add(elementoProductoEnCarrito.getText().trim());
-        }
-
-        // Verificar que todos los nombres de los productos agregados se encuentran en el carrito
         for (String nombreProductoAgregado : nombresProductosAgregados) {
             if (!nombresProductosCarrito.contains(nombreProductoAgregado)) {
                 throw new AssertionError("El producto " + nombreProductoAgregado + " no está presente en el carrito.");
