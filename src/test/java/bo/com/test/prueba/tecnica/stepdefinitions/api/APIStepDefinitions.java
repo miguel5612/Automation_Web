@@ -9,8 +9,13 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
+import org.junit.Before;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.File;
+import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,22 +25,26 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class APIStepDefinitions {
+    @Before
+    public void setup() {
+    }
 
     @Given("el usuario {string} realiza la peticion {string}")
     public void el_usuario_realiza_la_peticion(String usuario, String nombrePeticion) {
-        OnStage.setTheStage(new OnlineCast());
-        theActorCalled(usuario);
+        String baseUrl = "http://localhost:5002";
+        Actor miguel = OnStage.theActorCalled(usuario);
+        miguel.can(CallAnApi.at(baseUrl));
     }
 
-    @When("llama al endpoint correspondiente")
-    public void llama_al_endpoint_correspondiente(DataTable dataTable) {
+    @When("llama al endpoint correspondiente el actor {string}")
+    public void llama_al_endpoint_correspondiente(String actorNombre, DataTable dataTable) {
         List<Map<String, String>> detailsList = dataTable.asMaps();
         for (Map<String, String> details : detailsList) {
-            String method = details.get("metodo");
-            String url = details.get("URL");
+            String method = details.get("Metodo");
+            String url = details.get("EndPoint");
             String headersString = details.get("Headers").equals("[empty]") ? "" : details.get("Headers");
             String body = Optional.ofNullable(details.get("Body")).orElse("");
-            String fileURL = Optional.ofNullable(details.get("fileURL")).orElse(null);
+            String fileURL = Optional.ofNullable(details.get("FileURL")).orElse(null);
 
 
             Map<String, String> headers = new HashMap<>();
@@ -47,26 +56,41 @@ public class APIStepDefinitions {
                     }
                 }
             }
-            OnStage.theActorInTheSpotlight().attemptsTo(
-                    ExecuteAPIRequest.withDetails(method, url, headers, body)
+            Actor actor = OnStage.theActorCalled(actorNombre);
+
+            actor.attemptsTo(
+                    ExecuteAPIRequest.withDetails(method, url, headers, body, fileURL)
             );
         }
     }
 
-    @Then("deberia recibir una respuesta acorde a los parametros preestablecidos")
-    public void deberia_recibir_una_respuesta_acorde_a_los_parametros_preestablecidos(Map<String, String> verificationData) {
-        Actor actor = OnStage.theActorInTheSpotlight();
-        JsonNode responseJson = actor.recall("lastApiResponse");
+    @Then("deberia {string} recibir una respuesta acorde a los parametros preestablecidos")
+    public void deberia_recibir_una_respuesta_acorde_a_los_parametros_preestablecidos(String actorNombre, DataTable dataTable) {
+        List<Map<String, String>> detailsList = dataTable.asMaps();
+        for (Map<String, String> details : detailsList) {
+            String pathParams = details.get("PathParams");
+            String expectedResponses = details.get("RespuestasEsperadas");
+            Actor actor = OnStage.theActorCalled(actorNombre);
+            JsonNode responseJson = actor.recall("lastApiResponse");
 
-        verificationData.forEach((key, value) -> {
-            String[] paths = key.split("#");
-            String[] expectedValues = value.split("#");
+            if (pathParams == null && expectedResponses  == null) {
+                // Asumimos que es una descarga de archivo
+                String downloadedFilePath = actor.recall("downloadedFilePath");
+                File file = new File(downloadedFilePath);
+                assertThat(file.exists()).isTrue();  // Verificar que el archivo existe
+            } else {
+                String[] pathParamsArray = pathParams.split("#");
+                String[] expectedResponsesArray = expectedResponses.split("#");
+                for (int i = 0; i < pathParamsArray.length; i++) {
+                    String currentPath = pathParamsArray[i];
+                    String expectedValue = expectedResponsesArray[i];
+                    JsonNode actualValue = responseJson.at(convertToJSONPointer(currentPath));
 
-            for (int i = 0; i < paths.length; i++) {
-                JsonNode actualValue = responseJson.at(convertToJSONPointer(paths[i]));
-                assertThat(actualValue.asText()).isEqualTo(expectedValues[i]);
+                    // Use a method like `asText()` or `toString()` based on the type of the actualValue
+                    assertThat(actualValue.asText()).isEqualTo(expectedValue);
+                }
             }
-        });
+        }
     }
 
     private String convertToJSONPointer(String path) {
