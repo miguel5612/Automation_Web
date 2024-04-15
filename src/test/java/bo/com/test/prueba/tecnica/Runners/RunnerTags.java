@@ -13,7 +13,7 @@ import java.io.IOException;
 @RunWith(RunnerPersonalizado.class)
 @CucumberOptions(
         features="src/test/resources/features/",
-        tags= "@apiRest",
+        tags= "@agregarCarroProductosAleatorios",
         glue= "bo.com.test.prueba.tecnica.stepdefinitions",
         plugin = {"pretty","json:target/cucumber-reports/cucumber.json"},
         snippets=CucumberOptions.SnippetType.CAMELCASE,

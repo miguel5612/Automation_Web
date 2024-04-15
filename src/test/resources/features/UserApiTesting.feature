@@ -22,6 +22,6 @@ Feature: Realizar la prueba automatizada de una API
    |Create a new Member   |POST   |/api/members   |Authorization: Basic YWRtaW46YWRtaW4='   |{"name":"Ryan","gender":"Male"}   |   |name#gender   |Ryan#Male   |miguel3|
    |Upload a File   |POST   |/api/upload   |Authorization: Basic YWRtaW46YWRtaW4='   |   |C:/Users/Usuario/Documents/Automation_Web/src/test/resources/jpg/demo.jpg   |success#message   |true#File uploaded successfully!   |miguel7|
    |Download a File   |GET   |/api/download?name=Yey.jpg   |Authorization: Basic YWRtaW46YWRtaW4='   |   |   |   |   |miguel8|
-   |Delete a Member   |DELETE   |/api/members/5   |Authorization: Basic YWRtaW46YWRtaW4='   |   |   |msg   |Member with id 5 is deleted successfully   |miguel4|
+   |Delete a Member   |DELETE   |/api/members/40   |Authorization: Basic YWRtaW46YWRtaW4='   |   |   |msg   |Member with id 40 is deleted successfully   |miguel4|
    |Update a Member Via PATCH   |PATCH   |/api/members/21   |Authorization: Basic YWRtaW46YWRtaW4='   |{"name":"Alee"}   |   |msg   |Member with id 21 is updated successfully   |miguel6|
    |Update a Member Via PUT   |PUT   |/api/members/20   |Authorization: Basic YWRtaW46YWRtaW4='   |{"name":"Ravina","gender":"Female"}   |   |msg   |Member with id 20 is updated successfully   |miguel5|
