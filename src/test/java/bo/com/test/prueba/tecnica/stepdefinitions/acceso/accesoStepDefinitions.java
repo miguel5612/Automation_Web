@@ -1,10 +1,6 @@
 package bo.com.test.prueba.tecnica.stepdefinitions.acceso;
 
-import bo.com.test.prueba.tecnica.tasks.agregarProductosAleatoriosAlCarrito;
-import bo.com.test.prueba.tecnica.tasks.seleccionarCategoriaSubcategoria;
-import bo.com.test.prueba.tecnica.tasks.verificarCantidadesDeProductosEnElCarrito;
-import bo.com.test.prueba.tecnica.tasks.verificarNumeroDeProductosEnElCarrito;
-import bo.com.test.prueba.tecnica.tasks.verificarNombresCarrito;
+import bo.com.test.prueba.tecnica.tasks.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -65,8 +61,10 @@ public class accesoStepDefinitions {
     }
     @And("se verifica que el total de los precios en el carrito sea correcto")
     public void se_verifica_que_el_total_de_los_precios_carrito_sea_correcto() {
-        // Verificar cantidades
-        int a = 1 + 1;
+        OnStage.theActorInTheSpotlight().attemptsTo(
+            verificarSubtotalCarrito.con()
+        );
+
     }
     @And("se verifica que el número de productos en el carrito sea correcta")
     public void se_verifica_que_el_numero_de_productos_en_el_carrito() {

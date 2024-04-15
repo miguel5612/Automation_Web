@@ -9,4 +9,7 @@ public class carritoCompras {
             .locatedBy("//div[@data-molecule-product-detail-quantity='true']//span[@data-molecule-quantity-und-value='true']");
     public static final Target CANTIDADES_ELEMENTOS_EN_CARRITO = Target.the("Cantidades de Productos")
             .locatedBy("//div[@data-molecule-product-detail='true']");
+    public static final Target SUBTOTAL_CARRITO_COMPRAS = Target.the("Subtotal del carrito")
+            .locatedBy("//div[@class='exito-checkout-io-0-x-summarySubTotal']//span[@data-molecule-summary-item-value='true']");
+
 }
