@@ -15,9 +15,6 @@ pipeline {
         jiraServerAddress = "https://atlassian.net"
         sourceCodeURL = "https://github.com/miguel5612/Automation_Web"
     }
-    tools {
-        gradle "gradle"
-    }
     agent { node { label 'Windows-builder' } }
     options { buildDiscarder logRotator( daysToKeepStr: '16',numToKeepStr: '10') }
     stages {
