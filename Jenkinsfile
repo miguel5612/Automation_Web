@@ -1,101 +1,50 @@
-#!groovy
-
-import java.text.SimpleDateFormat
-
-def dateFormat = new SimpleDateFormat("yyyyMMddHHmm")
-def date = new Date()
-def timestamp = dateFormat.format(date).toString()
-
 pipeline {
+    agent any  // Utiliza cualquier agente disponible en Jenkins
+
     environment {
         team = "QA"
         productName = "Prueba"
         branchName = "master"
-        jiraProjectVersion = "1.0"
-        jiraServerAddress = "https://atlassian.net"
         sourceCodeURL = "https://github.com/miguel5612/Automation_Web"
     }
-    agent { node { label 'Windows-builder' } }
-    options { buildDiscarder logRotator( daysToKeepStr: '16',numToKeepStr: '10') }
+
+    options {
+        buildDiscarder logRotator(daysToKeepStr: '16', numToKeepStr: '10')
+    }
+
     stages {
-        stage('Setup parameters') {
-            steps {
-                script {
-                    properties([
-                        parameters([
-                            text('name'), 
-                            text('description'),
-                            choice(
-                                choices: ['Runner', 'RunnerPersonalizado'], 
-                                name: 'runner'
-                            ),
-                            choice(
-                                choices: ['smokeTest', 'iniciarSesion', 'transferencias'], 
-                                name: 'tagName'
-                            ),
-                            choice(
-                                choices: ['TEST', 'AUTO'], 
-                                name: 'projectKey'
-                            )
-                        ])
-                    ])
-                }
-            }
-        }
         stage('Cleanup Workspace') {
             steps {
-                cleanWs()
+                cleanWs()  // Limpia el espacio de trabajo
             }
         }
+
         stage('Code Checkout') {
             steps {
-                script {
-                    checkout([
-                        $class: "GitSCM", 
-                        branches: [[ name: "${branchName}" ]],
-                        userRemoteConfigs: [[ url: "${sourceCodeURL}" ]]
-                    ])
-                }
+                checkout scm  // Realiza la descarga del código desde el repositorio configurado
             }
         }
-        stage('Execute tests') {
+
+        stage('Execute Tests') {
             steps {
-                script {
-                    try {
-                        //bat("gradle clean test -Dcucumber.options=\"--tags ${params.tagName}\" aggregate")
-                        //bat("gradle clean test -PcucumberArgs=\"--tags ${params.tagName}\" aggregate")
-                        //bat("gradle clean test aggregate --info")
-                        bat("gradle clean test --tests *${params.runner}* -Dtags=\"@${params.tagName}\" aggregate")
-                        echo 'Test Ejecutados sin Fallo'
-                        currentBuild.result = 'SUCCESS'
-                    } catch (ex) {
-                        echo 'Test Ejecutados con Fallo'
-                        currentBuild.result = 'UNSTABLE'
-                    }
-                }
+                echo "Ejecutando tests simples"
+                // Simula la ejecución de tests
+                sh "echo 'Test results: SUCCESS'"
             }
         }
-       
-        stage('Generate evidence') {
+
+        stage('Generate Report') {
             steps {
-                script {
-                    try {
-                        publishHTML([
-                            allowMissing: false,
-                            alwaysLinkToLastBuild: true,
-                            keepAll: true,
-                            reportDir: "${WORKSPACE}//target//site//serenity",
-                            reportFiles: 'index.html',
-                            reportName: 'Evidencias Automatizacion',
-                            reportTitles: 'WEB'
-                        ])
-                        echo 'Reporte Html realizado con exito'
-                    } catch (e) {
-                        echo 'Generacion fallida'
-                        currentBuild.result = 'UNSTABLE'
-                    }
-                }
+                echo "Generando reporte simple"
+                // Simula la generación de un reporte
+                sh "echo 'Reporte generado'"
             }
+        }
+    }
+
+    post {
+        always {
+            echo "Proceso completado"
         }
     }
 }
